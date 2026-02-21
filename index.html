@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клуб Студентов</title>
+  <!-- Связка с CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Блок входа -->
+  <div id="loginBlock">
+    <h1>Здравствуйте</h1>
+    <p>Закрытый клуб студентов. Здесь мы проводим опросы, обсуждаем предметы и делимся тем, что действительно работает. Анонимно и главное без личных данных.</p>
+    <input type="password" id="passInput" placeholder="Введите пароль">
+    <button onclick="checkCode()">Войти</button>
+  </div>
+
+  <!-- Главная страница -->
+  <div id="mainContent" style="display: none;">
+    <h2>Добро пожаловать</h2>
+    <button onclick="goToPage()">Опросы</button>
+    <button onclick="goToChats()">Советы</button>
+  </div>
+
+  <!-- Страница 3 (Опросы/Ввод) -->
+  <div id="page3" style="display: none;">
+    <textarea id="messageInput" placeholder="Введите текст"></textarea>
+    <button onclick="goBackFromPage3()">Вернуться назад</button>
+    <button onclick="sendToPage5()">Отправить</button>
+  </div>
+
+  <!-- Страница 5 (Результат) -->
+  <div id="page5" style="display: none;">
+    <span id="displayWord"></span>
+    <button onclick="goBack()">Вернуться назад</button>
+  </div>
+
+  <!-- Страница Советов (Чаты) -->
+  <div id="pageChats" style="display: none;">
+    <h2>Советы</h2>
+    <button onclick="goBackFromChats()">Вернуться назад</button>
+  </div>
+
+  <!-- Связка с JS -->
+  <script src="script.js"></script>
+</body>
+</html>
